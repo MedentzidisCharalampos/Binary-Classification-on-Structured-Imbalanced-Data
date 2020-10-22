@@ -39,7 +39,7 @@ Accuracy is not a helpful metric for this task. We can 99.8%+ accuracy on this t
 4. Train the model for 20 epochs and early stopping to avoid overfitting.
 5. Produce plots of your model's accuracy and loss on the training and validation set.
 ![alt text](https://github.com/MedentzidisCharalampos/Binary-Classification-on-Structured-Imbalanced-Data/blob/main/training_epochs.png)
-6. Evaluate your model on the test dataset and display the results for the metrics.
+6. Evaluate your model on the test dataset and display the results for the metrics.  
 ![alt text](https://github.com/MedentzidisCharalampos/Binary-Classification-on-Structured-Imbalanced-Data/blob/main/confusio_matrix_.png)
 
 
