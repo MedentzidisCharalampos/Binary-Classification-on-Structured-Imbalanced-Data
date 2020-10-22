@@ -31,4 +31,8 @@ Normalize the input features. We set the mean to 0 and standard deviation to 1.
 
 Accuracy is not a helpful metric for this task. We can 99.8%+ accuracy on this task by predicting False all the time.
 
-
+# Build the model
+1. The model is fit using a larger than default batch size of 2048. If the batch size was too small, they would likely have no fraudulent transactions to learn from.
+2. The initial bias is setted properly to help initial convergence.
+![alt text](https://github.com/MedentzidisCharalampos/Binary-Classification-on-Structured-Imbalanced-Data/blob/main/loss_convergence.png)
+3. Checkpoint the initial weights
