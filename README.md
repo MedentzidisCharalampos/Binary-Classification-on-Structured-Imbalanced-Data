@@ -10,7 +10,7 @@ Normalize the input features. We set the mean to 0 and standard deviation to 1.
 
 # Data distribution
 
-![alt text](https://github.com/MedentzidisCharalampos/Binary-Classification-on-Structured-Imbalanced-Data/blob/main/positive_distribution.png)
+![alt text](https://github.com/MedentzidisCharalampos/Binary-Classification-on-Structured-Imbalanced-Data/blob/main/positive_distribution.png =1200x1200)
 ![alt text](https://github.com/MedentzidisCharalampos/Binary-Classification-on-Structured-Imbalanced-Data/blob/main/negative_distribution.png)
 
 1. The most of the values are concentrated in range [-2, 2] which make sense as we have normalize the data.
@@ -62,7 +62,7 @@ It looks like the precision is relatively high, but the recall and the area unde
 1. Oversample the minority class.
 2. Train on the oversampled data.
 3. Check training history with early stopping to avoid overfit.
-![drawing](https://github.com/MedentzidisCharalampos/Binary-Classification-on-Structured-Imbalanced-Data/blob/main/plot_metric_oversampling_early_Stop.png)
+![alt text](https://github.com/MedentzidisCharalampos/Binary-Classification-on-Structured-Imbalanced-Data/blob/main/plot_metric_oversampling_early_Stop.png)
 4. Evaluate metrics(https://github.com/MedentzidisCharalampos/Binary-Classification-on-Structured-Imbalanced-Data/blob/main/plot_metric_oversampling_early_Stop.png)
 5. Plot the ROC.  
-![drawing](https://github.com/MedentzidisCharalampos/Binary-Classification-on-Structured-Imbalanced-Data/blob/main/roc_oversampling.png)
+![alt text](https://github.com/MedentzidisCharalampos/Binary-Classification-on-Structured-Imbalanced-Data/blob/main/roc_oversampling.png)
