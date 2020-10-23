@@ -10,7 +10,7 @@ Normalize the input features. We set the mean to 0 and standard deviation to 1.
 
 # Data distribution
 
-![alt text](https://github.com/MedentzidisCharalampos/Binary-Classification-on-Structured-Imbalanced-Data/blob/main/positive_distribution.png =1200x1200)
+![alt text](https://github.com/MedentzidisCharalampos/Binary-Classification-on-Structured-Imbalanced-Data/blob/main/positive_distribution.png)
 ![alt text](https://github.com/MedentzidisCharalampos/Binary-Classification-on-Structured-Imbalanced-Data/blob/main/negative_distribution.png)
 
 1. The most of the values are concentrated in range [-2, 2] which make sense as we have normalize the data.
