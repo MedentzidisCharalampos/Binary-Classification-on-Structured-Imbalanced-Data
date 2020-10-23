@@ -41,7 +41,7 @@ Accuracy is not a helpful metric for this task. We can 99.8%+ accuracy on this t
 6. Check training history: Produce plots of your model's accuracy and loss on the training and validation set.
 ![alt text](https://github.com/MedentzidisCharalampos/Binary-Classification-on-Structured-Imbalanced-Data/blob/main/training_epochs.png)  
 6. Evaluate metrics: We use a confusion matrix to summarize the actual vs. predicted labels where the X axis is the predicted label and the Y axis is the actual label.  
-![alt text](https://github.com/MedentzidisCharalampos/Binary-Classification-on-Structured-Imbalanced-Data/blob/main/confusio_matrix_.png)
+![alt text](https://github.com/MedentzidisCharalampos/Binary-Classification-on-Structured-Imbalanced-Data/blob/main/confusio_matrix_.png)  
 If the model had predicted everything perfectly, this would be a diagonal matrix where values off the main diagonal, indicating incorrect predictions, would be zero. In this case the matrix shows that we have relatively few false positives, meaning that there were relatively few legitimate transactions that were incorrectly flagged. However, we would likely want to have even fewer false negatives despite the cost of increasing the number of false positives. This trade off may be preferable because false negatives would allow fraudulent transactions to go through, whereas false positives may cause an email to be sent to a customer to ask them to verify their card activity.  
 7. Plot the ROC.    
 ![alt text](https://github.com/MedentzidisCharalampos/Binary-Classification-on-Structured-Imbalanced-Data/blob/main/tp_fp.png)  
