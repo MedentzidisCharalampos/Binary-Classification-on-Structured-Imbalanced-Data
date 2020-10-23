@@ -39,12 +39,13 @@ Accuracy is not a helpful metric for this task. We can 99.8%+ accuracy on this t
 ![alt text](https://github.com/MedentzidisCharalampos/Binary-Classification-on-Structured-Imbalanced-Data/blob/main/loss_convergence.png)
 5. Train the model for 100 epochs and early stopping to avoid overfitting.
 6. Check training history: Produce plots of your model's accuracy and loss on the training and validation set.
-![alt text](https://github.com/MedentzidisCharalampos/Binary-Classification-on-Structured-Imbalanced-Data/blob/main/training_epochs.png)
+![alt text](https://github.com/MedentzidisCharalampos/Binary-Classification-on-Structured-Imbalanced-Data/blob/main/training_epochs.png)  
 6. Evaluate metrics: We use a confusion matrix to summarize the actual vs. predicted labels where the X axis is the predicted label and the Y axis is the actual label.  
 ![alt text](https://github.com/MedentzidisCharalampos/Binary-Classification-on-Structured-Imbalanced-Data/blob/main/confusio_matrix_.png)
-If the model had predicted everything perfectly, this would be a diagonal matrix where values off the main diagonal, indicating incorrect predictions, would be zero. In this case the matrix shows that we have relatively few false positives, meaning that there were relatively few legitimate transactions that were incorrectly flagged. However, we would likely want to have even fewer false negatives despite the cost of increasing the number of false positives. This trade off may be preferable because false negatives would allow fraudulent transactions to go through, whereas false positives may cause an email to be sent to a customer to ask them to verify their card activity.
-7. Plot ROC Curves.  
-![alt text](https://github.com/MedentzidisCharalampos/Binary-Classification-on-Structured-Imbalanced-Data/blob/main/tp_fp.png)
+If the model had predicted everything perfectly, this would be a diagonal matrix where values off the main diagonal, indicating incorrect predictions, would be zero. In this case the matrix shows that we have relatively few false positives, meaning that there were relatively few legitimate transactions that were incorrectly flagged. However, we would likely want to have even fewer false negatives despite the cost of increasing the number of false positives. This trade off may be preferable because false negatives would allow fraudulent transactions to go through, whereas false positives may cause an email to be sent to a customer to ask them to verify their card activity.  
+7. Plot the ROC.    
+![alt text](https://github.com/MedentzidisCharalampos/Binary-Classification-on-Structured-Imbalanced-Data/blob/main/tp_fp.png)  
+It looks like the precision is relatively high, but the recall and the area under the ROC curve (AUC) aren't as high as you might like. It is important to consider the costs of different types of errors in the context of the problem we care about. In our case, a false negative (a fraudulent transaction is missed) may have a financial cost, while a false positive (a transaction is incorrectly flagged as fraudulent) may decrease user happiness.
 
 # Class Weights
 1. Calculate class weights. The goal is to identify fraudulent transactions, but we don't have very many of those positive samples to work with, so we would want to have the classifier heavily weight the few examples that are available.
@@ -52,7 +53,16 @@ If the model had predicted everything perfectly, this would be a diagonal matrix
 3. Check training history.  
 ![alt text](https://github.com/MedentzidisCharalampos/Binary-Classification-on-Structured-Imbalanced-Data/blob/main/weighted_training.png)
 4. Evaluate Metrics.  
-![alt text](https://github.com/MedentzidisCharalampos/Binary-Classification-on-Structured-Imbalanced-Data/blob/main/confusion_weighted.png)
- With class weights the accuracy and precision are lower because there are more false positives, but conversely the recall and AUC are higher because the model also found more true positives. Despite having lower accuracy, this model has higher recall (and identifies more fraudulent transactions).
- 5. Plot ROC.
+![alt text](https://github.com/MedentzidisCharalampos/Binary-Classification-on-Structured-Imbalanced-Data/blob/main/confusion_weighted.png)  
+ With class weights the accuracy and precision are lower because there are more false positives, but conversely the recall and AUC are higher because the model also found more true positives. Despite having lower accuracy, this model has higher recall (and identifies more fraudulent transactions).  
+ 5. Plot the ROC.
  ![alt text](https://github.com/MedentzidisCharalampos/Binary-Classification-on-Structured-Imbalanced-Data/blob/main/roc_weighted.png)
+
+# Oversampling
+1. Oversample the minority class.
+2. Train on the oversampled data.
+3. Check training history with early stopping to avoid overfit.
+![alt text](https://github.com/MedentzidisCharalampos/Binary-Classification-on-Structured-Imbalanced-Data/blob/main/plot_metric_oversampling_early_Stop.png)
+4. Evaluate metrics(https://github.com/MedentzidisCharalampos/Binary-Classification-on-Structured-Imbalanced-Data/blob/main/plot_metric_oversampling_early_Stop.png)
+5. Plot the ROC.
+![alt text](https://github.com/MedentzidisCharalampos/Binary-Classification-on-Structured-Imbalanced-Data/blob/main/roc_oversampling.png)
