@@ -32,14 +32,18 @@ Normalize the input features. We set the mean to 0 and standard deviation to 1.
 Accuracy is not a helpful metric for this task. We can 99.8%+ accuracy on this task by predicting False all the time.
 
 # Baseline Model
-1. The model is fit using a larger than default batch size of 2048. If the batch size was too small, they would likely have no fraudulent transactions to learn from.
-2. The initial bias is setted properly to help initial convergence.
-![alt text](https://github.com/MedentzidisCharalampos/Binary-Classification-on-Structured-Imbalanced-Data/blob/main/loss_convergence.png)
+1. Build the model: The model is fit using a larger than default batch size of 2048, this is important to ensure that each batch has a decent chance of containing a few positive samples. If the batch size was too small, they would likely have no fraudulent transactions to learn from.
+2. Set the correct initial bias
 3. Checkpoint the initial weights.
-4. Train the model for 20 epochs and early stopping to avoid overfitting.
-5. Produce plots of your model's accuracy and loss on the training and validation set.
+4. Confirm that the bias fix helps.  
+![alt text](https://github.com/MedentzidisCharalampos/Binary-Classification-on-Structured-Imbalanced-Data/blob/main/loss_convergence.png)
+5. Train the model for 100 epochs and early stopping to avoid overfitting.
+6. Check training history: Produce plots of your model's accuracy and loss on the training and validation set.
 ![alt text](https://github.com/MedentzidisCharalampos/Binary-Classification-on-Structured-Imbalanced-Data/blob/main/training_epochs.png)
-6. Evaluate your model on the test dataset and display the results for the metrics.  
+6. Evaluate metrics: We use a confusion matrix to summarize the actual vs. predicted labels where the X axis is the predicted label and the Y axis is the actual label.
 ![alt text](https://github.com/MedentzidisCharalampos/Binary-Classification-on-Structured-Imbalanced-Data/blob/main/confusio_matrix_.png)
+7. Plot ROC Curves
+![alt text](https://github.com/MedentzidisCharalampos/Binary-Classification-on-Structured-Imbalanced-Data/blob/main/tp_fp.png)
+
 
 
