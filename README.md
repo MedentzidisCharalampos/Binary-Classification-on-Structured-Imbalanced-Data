@@ -63,7 +63,7 @@ It looks like the precision is relatively high, but the recall and the area unde
 2. Train on the oversampled data.
 3. Check training history with early stopping to avoid overfit.
 ![alt text](https://github.com/MedentzidisCharalampos/Binary-Classification-on-Structured-Imbalanced-Data/blob/main/plot_metric_oversampling_early_Stop.png)
-4. Evaluate metrics.
+4. Evaluate metrics.  
 ![alt text](https://github.com/MedentzidisCharalampos/Binary-Classification-on-Structured-Imbalanced-Data/blob/main/confusion_matrix_oversampling.png)
 5. Plot the ROC.  
 ![alt text](https://github.com/MedentzidisCharalampos/Binary-Classification-on-Structured-Imbalanced-Data/blob/main/roc_oversampling.png)
